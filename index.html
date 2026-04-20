@@ -1,8 +1,332 @@
 <!doctype html>
-<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/style.css" />
+    <title>Theo Symonds GIS Portfolio</title>
+  </head>
   <body>
-    <h1>CSCI 181</h1>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <p>Project 2</p>
+    <header class="site-header">
+      <div class="site-width header-inner">
+        <a href="index.html" class="site-name">Theo Symonds</a>
+
+        <nav aria-label="Primary navigation">
+          <ul class="nav-list">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section id="hero" class="hero">
+        <div class="site-width hero-inner">
+          <p class="hero-label">GIS Portfolio</p>
+          <h1>Cartography and Geospatial Data Analysis</h1>
+          <p class="hero-text">
+            Get more information about how a map was made and the data that was
+            used for each project.
+          </p>
+        </div>
+      </section>
+
+      <section class="projects-section site-width" id="projects">
+        <h2>Projects</h2>
+        <p class="projects-intro">Explore each project:</p>
+
+        <ul class="project-list">
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="0"
+                aria-labelledby="project-title-0"
+                aria-describedby="project-desc-0"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Urban Growth Change Map project."
+                />
+                <span class="project-category">Remote Sensing</span>
+                <h3 class="card-title" id="project-title-0">
+                  Urban Growth Change Map
+                </h3>
+                <p class="card-description" id="project-desc-0">
+                  Compared land cover from two years to show where development
+                  expanded.
+                </p>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="1"
+                aria-labelledby="project-title-1"
+                aria-describedby="project-desc-1"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Trail Accessibility Audit project."
+                />
+                <span class="project-category">Public Planning</span>
+                <h3 class="card-title" id="project-title-1">
+                  Trail Accessibility Audit
+                </h3>
+                <p class="card-description" id="project-desc-1">
+                  Mapped sidewalks, ramps, and trail routes to identify access
+                  gaps near parks.
+                </p>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="2"
+                aria-labelledby="project-title-2"
+                aria-describedby="project-desc-2"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Flood Risk Story Map project."
+                />
+                <span class="project-category">Hazard Analysis</span>
+                <h3 class="card-title" id="project-title-2">
+                  Flood Risk Story Map
+                </h3>
+                <p class="card-description" id="project-desc-2">
+                  Combined elevation and stream data to explain flood-prone
+                  areas in a simple layout.
+                </p>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="3"
+                aria-labelledby="project-title-3"
+                aria-describedby="project-desc-3"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Campus Tree Inventory project."
+                />
+                <span class="project-category">Field Data</span>
+                <h3 class="card-title" id="project-title-3">
+                  Campus Tree Inventory
+                </h3>
+                <p class="card-description" id="project-desc-3">
+                  Organized tree point data by species, condition, and
+                  maintenance needs.
+                </p>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="4"
+                aria-labelledby="project-title-4"
+                aria-describedby="project-desc-4"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Transit Stop Service Area project."
+                />
+                <span class="project-category">Network Analysis</span>
+                <h3 class="card-title" id="project-title-4">
+                  Transit Stop Service Area
+                </h3>
+                <p class="card-description" id="project-desc-4">
+                  Measured walking access around bus stops to compare service
+                  coverage.
+                </p>
+              </button>
+            </article>
+          </li>
+          <li>
+            <article class="project-entry">
+              <button
+                type="button"
+                class="project-card"
+                data-index="5"
+                aria-labelledby="project-title-5"
+                aria-describedby="project-desc-5"
+              >
+                <img
+                  class="project-image"
+                  src="./images/project-placeholder.svg"
+                  alt="Preview image for the Habitat Suitability Model project."
+                />
+                <span class="project-category">Environmental GIS</span>
+                <h3 class="card-title" id="project-title-5">
+                  Habitat Suitability Model
+                </h3>
+                <p class="card-description" id="project-desc-5">
+                  Used slope, land cover, and water distance layers to estimate
+                  suitable habitat.
+                </p>
+              </button>
+            </article>
+          </li>
+        </ul>
+      </section>
+
+      <dialog
+        id="project-modal"
+        tabindex="-1"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-details"
+      >
+        <button
+          type="button"
+          id="modal-close"
+          class="modal-close"
+          aria-label="Close project details"
+        >
+          Close
+        </button>
+
+        <p class="modal-category" id="modal-category">Category</p>
+        <h3 id="modal-title">Project Title</h3>
+        <p class="modal-tools">
+          <strong>Tools:</strong>
+          <span id="modal-tools">ArcGIS Pro</span>
+        </p>
+        <p id="modal-details">Project details will appear here.</p>
+        <a
+          id="modal-link"
+          class="modal-link"
+          href="https://example.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View project link
+        </a>
+      </dialog>
+    </main>
+
+    <script>
+      const projects = [
+        {
+          title: "Urban Growth Change Map",
+          category: "Remote Sensing",
+          tools: "ArcGIS Pro, Landsat imagery, Excel",
+          details:
+            "Compared land cover from two different years to show where urban growth expanded over time.",
+          link_text: "View placeholder project page",
+          href: "https://example.com/urban-growth-change-map",
+        },
+        {
+          title: "Trail Accessibility Audit",
+          category: "Public Planning",
+          tools: "ArcGIS Online, Survey123, Google Sheets",
+          details:
+            "Mapped sidewalks, curb ramps, and trail routes to identify accessibility gaps near local parks.",
+          link_text: "Open placeholder audit page",
+          href: "https://example.com/trail-accessibility-audit",
+        },
+        {
+          title: "Flood Risk Story Map",
+          category: "Hazard Analysis",
+          tools: "ArcGIS StoryMaps, DEM data, stream buffers",
+          details:
+            "Combined elevation and stream data to explain flood-prone areas in a short public-facing project.",
+          link_text: "Read placeholder story map",
+          href: "https://example.com/flood-risk-story-map",
+        },
+        {
+          title: "Campus Tree Inventory",
+          category: "Field Data",
+          tools: "Field Maps, ArcGIS Pro, attribute tables",
+          details:
+            "Organized tree point data by species, condition, and maintenance needs for a campus inventory.",
+          link_text: "Visit placeholder inventory page",
+          href: "https://example.com/campus-tree-inventory",
+        },
+        {
+          title: "Transit Stop Service Area",
+          category: "Network Analysis",
+          tools: "Network Analyst, census data, service areas",
+          details:
+            "Measured walking access around bus stops to compare transit service coverage across neighborhoods.",
+          link_text: "View placeholder service area map",
+          href: "https://example.com/transit-stop-service-area",
+        },
+        {
+          title: "Habitat Suitability Model",
+          category: "Environmental GIS",
+          tools: "Raster calculator, slope analysis, land cover layers",
+          details:
+            "Used environmental layers to estimate suitable habitat areas with a simple GIS model.",
+          link_text: "Open placeholder habitat model",
+          href: "https://example.com/habitat-suitability-model",
+        },
+      ];
+
+      const modal = document.querySelector("#project-modal");
+      const modal_title = document.querySelector("#modal-title");
+      const modal_details = document.querySelector("#modal-details");
+      const modal_link = document.querySelector("#modal-link");
+      const modal_close = document.querySelector("#modal-close");
+      const modal_category = document.querySelector("#modal-category");
+      const modal_tools = document.querySelector("#modal-tools");
+
+      const card_buttons = document.querySelectorAll(".project-card");
+
+      function openModalByIndex(index) {
+        const project = projects[index];
+        if (!project) return;
+
+        modal_title.textContent = project.title;
+        modal_category.textContent = project.category;
+        modal_tools.textContent = project.tools;
+        modal_details.textContent = project.details;
+        modal_link.textContent = project.link_text;
+        modal_link.href = project.href;
+
+        modal.showModal();
+        document.body.style.overflow = "hidden";
+        modal.focus();
+      }
+
+      function onCardClicked(event) {
+        const clicked_card = event.currentTarget;
+        const index = Number(clicked_card.dataset.index);
+        openModalByIndex(index);
+      }
+
+      for (let i = 0; i < card_buttons.length; i += 1) {
+        card_buttons[i].addEventListener("click", onCardClicked);
+      }
+
+      modal_close.addEventListener("click", function () {
+        modal.close();
+      });
+
+      modal.addEventListener("close", function () {
+        document.body.style.overflow = "";
+      });
+    </script>
   </body>
 </html>
