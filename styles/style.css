@@ -215,10 +215,12 @@ h2 {
 
 #project-modal {
   width: min(90%, 34rem);
+  max-height: 90vh;
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 1.5rem;
   background-color: var(--surface);
+  overflow-y: auto;
 }
 
 #project-modal[open] {
@@ -239,6 +241,12 @@ h2 {
   border-radius: 0.5rem;
   padding: 0.5rem 0.85rem;
   cursor: pointer;
+}
+
+.modal-image {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
 }
 
 .modal-tools,

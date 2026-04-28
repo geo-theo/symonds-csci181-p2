@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Theo Symonds GIS Portfolio</title>
+    <title>Sample GIS Portfolio</title>
   </head>
   <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
       <div class="site-width header-inner">
-        <a href="index.html" class="site-name">Theo Symonds</a>
+        <a href="index.html" class="site-name">GIS Analyst</a>
 
         <nav aria-label="Primary navigation">
           <ul class="nav-list">
@@ -50,7 +50,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project1.svg"
                   alt="Preview image for the Urban Growth Change Map project."
                 />
                 <span class="project-category">Remote Sensing</span>
@@ -75,7 +75,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project2.svg"
                   alt="Preview image for the Trail Accessibility Audit project."
                 />
                 <span class="project-category">Public Planning</span>
@@ -100,7 +100,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project3.svg"
                   alt="Preview image for the Flood Risk Story Map project."
                 />
                 <span class="project-category">Hazard Analysis</span>
@@ -125,7 +125,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project4.svg"
                   alt="Preview image for the Campus Tree Inventory project."
                 />
                 <span class="project-category">Field Data</span>
@@ -150,7 +150,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project5.svg"
                   alt="Preview image for the Transit Stop Service Area project."
                 />
                 <span class="project-category">Network Analysis</span>
@@ -175,7 +175,7 @@
               >
                 <img
                   class="project-image"
-                  src="./images/project-placeholder.svg"
+                  src="./images/project6.svg"
                   alt="Preview image for the Habitat Suitability Model project."
                 />
                 <span class="project-category">Environmental GIS</span>
@@ -207,6 +207,12 @@
           Close
         </button>
 
+        <img
+          id="modal-image"
+          class="modal-image"
+          src="./images/project1.svg"
+          alt="Preview image for the selected project."
+        />
         <p class="modal-category" id="modal-category">Category</p>
         <h3 id="modal-title">Project Title</h3>
         <p class="modal-tools">
@@ -234,6 +240,8 @@
           tools: "ArcGIS Pro, Landsat imagery, Excel",
           details:
             "Compared land cover from two different years to show where urban growth expanded over time.",
+          image: "./images/project1.svg",
+          image_alt: "Preview image for the Urban Growth Change Map project.",
           link_text: "View placeholder project page",
           href: "https://example.com/urban-growth-change-map",
         },
@@ -243,6 +251,8 @@
           tools: "ArcGIS Online, Survey123, Google Sheets",
           details:
             "Mapped sidewalks, curb ramps, and trail routes to identify accessibility gaps near local parks.",
+          image: "./images/project2.svg",
+          image_alt: "Preview image for the Trail Accessibility Audit project.",
           link_text: "Open placeholder audit page",
           href: "https://example.com/trail-accessibility-audit",
         },
@@ -252,6 +262,8 @@
           tools: "ArcGIS StoryMaps, DEM data, stream buffers",
           details:
             "Combined elevation and stream data to explain flood-prone areas in a short public-facing project.",
+          image: "./images/project3.svg",
+          image_alt: "Preview image for the Flood Risk Story Map project.",
           link_text: "Read placeholder story map",
           href: "https://example.com/flood-risk-story-map",
         },
@@ -261,6 +273,8 @@
           tools: "Field Maps, ArcGIS Pro, attribute tables",
           details:
             "Organized tree point data by species, condition, and maintenance needs for a campus inventory.",
+          image: "./images/project4.svg",
+          image_alt: "Preview image for the Campus Tree Inventory project.",
           link_text: "Visit placeholder inventory page",
           href: "https://example.com/campus-tree-inventory",
         },
@@ -270,6 +284,8 @@
           tools: "Network Analyst, census data, service areas",
           details:
             "Measured walking access around bus stops to compare transit service coverage across neighborhoods.",
+          image: "./images/project5.svg",
+          image_alt: "Preview image for the Transit Stop Service Area project.",
           link_text: "View placeholder service area map",
           href: "https://example.com/transit-stop-service-area",
         },
@@ -279,6 +295,8 @@
           tools: "Raster calculator, slope analysis, land cover layers",
           details:
             "Used environmental layers to estimate suitable habitat areas with a simple GIS model.",
+          image: "./images/project6.svg",
+          image_alt: "Preview image for the Habitat Suitability Model project.",
           link_text: "Open placeholder habitat model",
           href: "https://example.com/habitat-suitability-model",
         },
@@ -291,6 +309,7 @@
       const modal_close = document.querySelector("#modal-close");
       const modal_category = document.querySelector("#modal-category");
       const modal_tools = document.querySelector("#modal-tools");
+      const modal_image = document.querySelector("#modal-image");
 
       const card_buttons = document.querySelectorAll(".project-card");
 
@@ -302,6 +321,8 @@
         modal_category.textContent = project.category;
         modal_tools.textContent = project.tools;
         modal_details.textContent = project.details;
+        modal_image.src = project.image;
+        modal_image.alt = project.image_alt;
         modal_link.textContent = project.link_text;
         modal_link.href = project.href;
 
